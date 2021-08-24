@@ -21,7 +21,7 @@ $bright-blue: hsl(245, 75%, 52%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
-
+$hover: rgb(137, 128, 235);
 // FONT SIZE
 $primary-size: 16px;
 
@@ -29,7 +29,6 @@ body {
   background: url("../images/pattern-background-desktop.svg") no-repeat;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
   background-position: top center;
   background-color: $pale-blue;
 
@@ -75,56 +74,71 @@ p,
       padding: 25px 25px;
       line-height: 1.5em;
     }
-  }
 
-  //---------------------PRICING----------------------
-  .pricing {
-    background-color: $very-pale-blue;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
+    //---------------------PRICING----------------------
+    .pricing {
+      background-color: $very-pale-blue;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
 
-    img {
-      height: 60px;
-      width: 60px;
-      padding: 5px;
-    }
+      img {
+        height: 60px;
+        width: 60px;
+        padding: 5px;
+      }
 
-    .pricing-desc {
-      text-align: left;
-      padding-left: 15px;
+      .pricing-desc {
+        text-align: left;
+        padding-left: 15px;
 
-      width: 100%;
-      h2 {
-        margin-bottom: 6px;
-        font-size: 16px;
-        font-weight: 900;
+        width: 100%;
+        h2 {
+          margin-bottom: 6px;
+          font-size: 16px;
+          font-weight: 900;
+        }
       }
       a {
+        color: $bright-blue;
         cursor: pointer;
         font-weight: 700;
+        &:hover {
+          color: $hover;
+          text-decoration: none;
+        }
       }
     }
-  }
-  //---------------------BUTTON----------------------
-  button {
-    font-family: "Red Hat Display", sans-serif;
-    font-weight: 700;
-    background-color: $bright-blue;
-    border-radius: 12px;
-    border: none;
-    color: white;
-    padding: 15px;
-    margin: 30px 0;
+    //---------------------BUTTON----------------------
+    button {
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 700;
+      background-color: $bright-blue;
+      border-radius: 12px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      margin: 30px 0;
 
-    box-shadow: -2px 22px 48px -8px $desaturated-blue;
-  }
-  //---------------------CANCEL ORDER----------------------
-  .cancel {
-    margin-top: 5px;
-    color: $desaturated-blue;
-    font-weight: 700;
+      box-shadow: -2px 22px 48px -8px $hover;
+
+      &:hover {
+        background-color: $hover;
+      }
+    }
+
+    //---------------------CANCEL ORDER----------------------
+    .cancel {
+      margin-top: 5px;
+      color: $desaturated-blue;
+      cursor: pointer;
+      font-weight: 700;
+      &:hover {
+        color: $hover;
+      }
+    }
   }
 }
 
@@ -140,14 +154,18 @@ p,
 
   #main {
     display: inline-block;
-    width: 300px;
-    height: 610px;
+    width: 325px;
+    height: 580px;
     margin: 5.5% auto;
 
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 22px 48px -34px $desaturated-blue;
     overflow: hidden;
+
+    .hero {
+      width: 100%;
+    }
 
     .text-container {
       padding: 25px 20px;

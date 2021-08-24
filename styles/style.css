@@ -18,7 +18,6 @@ body {
   background: url("../images/pattern-background-desktop.svg") no-repeat;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
   background-position: top center;
   background-color: #e0e8ff;
   height: 100%;
@@ -72,7 +71,7 @@ p,
   line-height: 1.5em;
 }
 
-#main .pricing {
+#main .text-container .pricing {
   background-color: #f5f7ff;
   padding: 15px;
   display: -webkit-box;
@@ -84,46 +83,62 @@ p,
   border-radius: 10px;
 }
 
-#main .pricing img {
+#main .text-container .pricing img {
   height: 60px;
   width: 60px;
   padding: 5px;
 }
 
-#main .pricing .pricing-desc {
+#main .text-container .pricing .pricing-desc {
   text-align: left;
   padding-left: 15px;
   width: 100%;
 }
 
-#main .pricing .pricing-desc h2 {
+#main .text-container .pricing .pricing-desc h2 {
   margin-bottom: 6px;
   font-size: 16px;
   font-weight: 900;
 }
 
-#main .pricing .pricing-desc a {
+#main .text-container .pricing a {
+  color: #3829e0;
   cursor: pointer;
   font-weight: 700;
 }
 
-#main button {
+#main .text-container .pricing a:hover {
+  color: #8980eb;
+  text-decoration: none;
+}
+
+#main .text-container button {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 700;
   background-color: #3829e0;
   border-radius: 12px;
   border: none;
   color: white;
+  cursor: pointer;
   padding: 15px;
   margin: 30px 0;
-  -webkit-box-shadow: -2px 22px 48px -8px #7280a7;
-          box-shadow: -2px 22px 48px -8px #7280a7;
+  -webkit-box-shadow: -2px 22px 48px -8px #8980eb;
+          box-shadow: -2px 22px 48px -8px #8980eb;
 }
 
-#main .cancel {
+#main .text-container button:hover {
+  background-color: #8980eb;
+}
+
+#main .text-container .cancel {
   margin-top: 5px;
   color: #7280a7;
+  cursor: pointer;
   font-weight: 700;
+}
+
+#main .text-container .cancel:hover {
+  color: #8980eb;
 }
 
 .attribution {
@@ -136,14 +151,17 @@ p,
   }
   #main {
     display: inline-block;
-    width: 300px;
-    height: 610px;
+    width: 325px;
+    height: 580px;
     margin: 5.5% auto;
     background-color: white;
     border-radius: 15px;
     -webkit-box-shadow: 0px 22px 48px -34px #7280a7;
             box-shadow: 0px 22px 48px -34px #7280a7;
     overflow: hidden;
+  }
+  #main .hero {
+    width: 100%;
   }
   #main .text-container {
     padding: 25px 20px;
