@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  font-family: "Red Hat Display", sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// ------------------------FONTS COLOR AND STUFF--------------------
+// PRIMARY COLORS
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+// NEUTRAL COLORS
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+// FONT SIZE
+$primary-size: 16px;
+
+body {
+  background: url("../images/pattern-background-desktop.svg") no-repeat;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: top center;
+  background-color: $pale-blue;
+
+  height: 100%;
+  width: 100vw;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: $dark-blue;
+}
+
+p,
+.cancel {
+  color: $desaturated-blue;
+}
+
+#main {
+  display: inline-block;
+  width: 450px;
+  height: 700px;
+  margin: 5.5% auto;
+
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 22px 48px -34px $desaturated-blue;
+  overflow: hidden;
+
+  //---------------------ORDER SUMMARY----------------------
+  .text-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: 900;
+      font-size: 28px;
+    }
+
+    .main-desc {
+      padding: 25px 25px;
+      line-height: 1.5em;
+    }
+  }
+
+  //---------------------PRICING----------------------
+  .pricing {
+    background-color: $very-pale-blue;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+    img {
+      height: 60px;
+      width: 60px;
+      padding: 5px;
+    }
+
+    .pricing-desc {
+      text-align: left;
+      padding-left: 15px;
+
+      width: 100%;
+      h2 {
+        margin-bottom: 6px;
+        font-size: 16px;
+        font-weight: 900;
+      }
+      a {
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+  //---------------------BUTTON----------------------
+  button {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    background-color: $bright-blue;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    padding: 15px;
+    margin: 30px 0;
+
+    box-shadow: -2px 22px 48px -8px $desaturated-blue;
+  }
+  //---------------------CANCEL ORDER----------------------
+  .cancel {
+    margin-top: 5px;
+    color: $desaturated-blue;
+    font-weight: 700;
+  }
+}
+
+.attribution {
+  display: block;
+}
+
+//---------------------MOBILE SCREEN 375px----------------------
+@media only screen and (max-width: 375px) {
+  * {
+    font-size: 0.95em;
+  }
+
+  #main {
+    display: inline-block;
+    width: 300px;
+    height: 610px;
+    margin: 5.5% auto;
+
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 22px 48px -34px $desaturated-blue;
+    overflow: hidden;
+
+    .text-container {
+      padding: 25px 20px;
+      h1 {
+        font-size: 1.4em;
+      }
+      .main-desc {
+        padding: 25px 5px;
+      }
+    }
+
+    .pricing {
+      padding: 15px 15px;
+
+      img {
+        height: 40px;
+        width: 40px;
+        padding: 0;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+    button {
+      border-radius: 7px;
+    }
+  }
+}
